@@ -1,0 +1,195 @@
+.slider-container {
+    position: relative;
+    margin-top: 10%;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 3/2;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.image-right {
+    clip-path: inset(0 50% 0 0);
+    /* Start with 50% revealed */
+    transition: clip-path 0.05s ease;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: red;
+    left: 50%;
+    cursor: ew-resize;
+    z-index: 2;
+    transition: left 0.05s ease;
+}
+
+.interaction {
+    display: none;
+}
+
+.interaction.active {
+    display: block;
+}
+
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.8); /* Optional: slight background for contrast */
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  .nav-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .morph-container {
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .morph-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+  }
+  
+  .morph-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+  }
+  
+  .morph-photo {
+    z-index: 1;
+    opacity: 1;
+  }
+  
+  .morph-art {
+    z-index: 2;
+    opacity: 0;
+  }
+  
+
+.frame-hover-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 3/2;
+    margin: auto;
+    overflow: hidden;
+}
+
+.base-image,
+.frame-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frame-hover {
+    clip-path: circle(80px at 50% 50%);
+    pointer-events: none;
+}
+
+.spotlight-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 3/2;
+    margin: auto;
+    overflow: hidden;
+}
+
+.spotlight-base,
+.spotlight-art {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.spotlight-art {
+    mask-image: radial-gradient(circle 80px at 50% 50%, white 100%, transparent 120%);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    transition: mask-position 0.1s;
+}
+
+.hover-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hover-base,
+  .hover-overlay {
+    width: 100%;
+    display: block;
+  }
+  
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 0.1s ease;
+    pointer-events: none; /* Let mouse go through to base image */
+  }
+  .frame-base {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .base-image {
+    width: 100%;
+    display: block;
+  }
+  
+  .frame-overlay {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border: 3px solid white;
+    border-radius: 8px;
+    pointer-events: none;
+    display: none; /* Hide until hover */
+  }
+  
+  .overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+    
